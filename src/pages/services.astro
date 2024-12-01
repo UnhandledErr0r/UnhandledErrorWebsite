@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro"
 
 <Layout>
     <Navbar/> 
-    <div class="mx-auto px-5 max-w-[1000px] w-full">
+    <div class="mx-auto  max-w-[1000px] w-full px-5">
         <p>A list of all the services I self-host and where to find them.</p>
         <h1 class="text-xl mt-5 mb-3 font-extrabold"> <span class="bg-gray-700 rounded-lg p-1">Server #1</span></h1>
         <div class="flex flex-col gap-5 px-1">
@@ -20,33 +20,36 @@ import Layout from "../layouts/Layout.astro"
         </div>
 
 
-        <table class="mt-5 w-full text-sm sm:text-base">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>URL</th>
-                    <th>Description</th>
-                    <th>Software</th>
-                    <th>Public</th>
-                </tr>
-            </thead>
+        <div class="overflow-x-auto mt-5">
+            <table class="w-full text-sm sm:text-base">
+                <thead>
+                    <tr>
+                        <th class="py-2 px-4 text-left"> </th>
+                        <th class="py-2 px-4 text-left">URL</th>
+                        <th class="py-2 px-4 text-left">Description</th>
+                        <th class="py-2 px-4 text-left">Software</th>
+                        <th class="py-2 px-4 text-left">Public</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4">🌐</td>
+                        <td class="py-2 px-4">unhandlederror.xyz</td>
+                        <td class="py-2 px-4">My website/blog</td>
+                        <td class="py-2 px-4">Astro</td>
+                        <td class="py-2 px-4 text-green-400">Yes</td>
+                    </tr>
 
-            <tr>
-                <th>🌐</th>
-                <th>unhandlederror.xyz</th>
-                <th>My website/blog</th>
-                <th>Astro</th>
-                <th class="text-green-400">Yes</th>
-            </tr>
-
-            <tr>
-                <th>🤖</th>
-                <th>https://discord.gg/j7yVCBrYZf</th>
-                <th>My personal funny discord bot, come check it!</th>
-                <th>Discord.js</th>
-                <th class="text-green-400">Yes</th>
-            </tr>
-        </table>
+                    <tr>
+                        <td class="py-2 px-4">🤖</td>
+                        <td class="py-2 px-4">https://discord.gg/j7yVCBrYZf</td>
+                        <td class="py-2 px-4">My personal funny discord bot, come check it!</td>
+                        <td class="py-2 px-4">Discord.js</td>
+                        <td class="py-2 px-4 text-green-400">Yes</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </Layout>
 
@@ -69,7 +72,4 @@ thead {
     color: white;
 }
 
-tbody tr:nth-child(odd) {
-    background-color: #f9f9f9;
-}
 </style>
