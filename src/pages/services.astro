@@ -5,9 +5,9 @@ import Layout from "../layouts/Layout.astro"
 
 <Layout>
     <Navbar/> 
-    <div class="mx-5 max-w-[1000px] sm:w-[400px] md:w-[700px] lg:w-[1000px]">
+    <div class="mx-auto px-5 max-w-[1000px] w-full">
         <p>A list of all the services I self-host and where to find them.</p>
-        <h1 class="text-xl mt-5 mb-3 font-extrabold"> <span class="bg-gray-700 rounded-lg p-1">Server</span></h1>
+        <h1 class="text-xl mt-5 mb-3 font-extrabold"> <span class="bg-gray-700 rounded-lg p-1">Server #1</span></h1>
         <div class="flex flex-col gap-5 px-1">
             <div>
                 <h1 class="text-lg  font-extrabold">Host</h1>
@@ -20,7 +20,7 @@ import Layout from "../layouts/Layout.astro"
         </div>
 
 
-        <table>
+        <table class="mt-5 w-full text-sm sm:text-base">
             <thead>
                 <tr>
                     <th></th>
@@ -36,32 +36,40 @@ import Layout from "../layouts/Layout.astro"
                 <th>unhandlederror.xyz</th>
                 <th>My website/blog</th>
                 <th>Astro</th>
-                <th>Yes</th>
+                <th class="text-green-400">Yes</th>
             </tr>
 
             <tr>
-                <th>⛏️</th>
-                <th>mc.unhandlederror.xyz</th>
+                <th>🤖</th>
+                <th>https://discord.gg/j7yVCBrYZf</th>
+                <th>My personal funny discord bot, come check it!</th>
+                <th>Discord.js</th>
+                <th class="text-green-400">Yes</th>
             </tr>
         </table>
     </div>
 </Layout>
 
 <style>
-    table{
-        width: 100%;
-    }
-    table, th, td{
-        border: 1px solid gray;
-    }
-
-    th{
-        text-align: left;
-        padding-left:  10px;
-        padding-right: 10px;
+    
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid gray;
     }
 
-    td{
-        padding: 5px 10px;
-    }
+th, td {
+    padding: 8px 12px;
+    text-align: left;
+    border: 1px solid gray;
+}
+
+thead {
+    background-color: #333;
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
 </style>
