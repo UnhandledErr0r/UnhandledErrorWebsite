@@ -1,0 +1,67 @@
+---
+import Navbar from "../components/Navbar.astro"
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout>
+    <Navbar/> 
+    <div class="mx-5 max-w-[1000px] sm:w-[400px] md:w-[700px] lg:w-[1000px]">
+        <p>A list of all the services I self-host and where to find them.</p>
+        <h1 class="text-xl mt-5 mb-3 font-extrabold"> <span class="bg-gray-700 rounded-lg p-1">Server</span></h1>
+        <div class="flex flex-col gap-5 px-1">
+            <div>
+                <h1 class="text-lg  font-extrabold">Host</h1>
+                <p>Hetzner CAX11, 2 vCPU, 4GB RAM</p>
+            </div>
+           <div>
+                <h1 class="text-lg  font-extrabold">IPs</h1>
+                <p>162.55.184.250, 2a01:4f8:c0c:861::/64</p>
+           </div>
+        </div>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>URL</th>
+                    <th>Description</th>
+                    <th>Software</th>
+                    <th>Public</th>
+                </tr>
+            </thead>
+
+            <tr>
+                <th>🌐</th>
+                <th>unhandlederror.xyz</th>
+                <th>My website/blog</th>
+                <th>Astro</th>
+                <th>Yes</th>
+            </tr>
+
+            <tr>
+                <th>⛏️</th>
+                <th>mc.unhandlederror.xyz</th>
+            </tr>
+        </table>
+    </div>
+</Layout>
+
+<style>
+    table{
+        width: 100%;
+    }
+    table, th, td{
+        border: 1px solid gray;
+    }
+
+    th{
+        text-align: left;
+        padding-left:  10px;
+        padding-right: 10px;
+    }
+
+    td{
+        padding: 5px 10px;
+    }
+</style>
