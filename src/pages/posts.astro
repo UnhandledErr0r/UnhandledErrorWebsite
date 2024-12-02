@@ -1,0 +1,22 @@
+---
+import Navbar from '../components/Navbar.astro'
+import Post from '../components/Post.astro'
+import Layout from '../layouts/Layout.astro'
+
+---
+<Layout>
+    <Navbar/>
+    <div class="flex flex-col gap-2 px-5 max-w-[1000px] w-full mx-auto">
+        <h1 class="text-xl sm:text-2xl mt-5 font-extrabold"> <span class="bg-gray-700 rounded-lg p-1">📫Posts</span></h1>
+        <p>Down there is a list of all of my posts.</p>
+
+        <Post icon='🧊' title='Packed Ice' description='A efficent minecraft server made in Rust.' href='/posts/packedice.md' lines={2000}/>
+        <Post icon='↗️' title='FSMD' description='A finite state machine designer coded with JS' href='/posts/fsmd.md' lines={3429}/>
+        <Post icon='🤖' title='Discord Bot' description='A bot made with discord.js for my discord server. ' href='/posts/discordbot.md' lines={1428}/>
+
+    </div>
+</Layout>
+
+
+
+
